@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "dist/**/*spec.ts",
+    ".eslintrc.js",
+    "src/**/reportWebVitals*"
+  ],
+  "include": ["src/**/*", ".eslintrc.js"]
+}
