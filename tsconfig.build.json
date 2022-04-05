@@ -5,8 +5,7 @@
     "test",
     "dist",
     "dist/**/*spec.ts",
-    ".eslintrc.js",
-    "src/**/reportWebVitals*"
+    ".eslintrc.js"
   ],
   "include": ["src/**/*", ".eslintrc.js"]
 }
