@@ -26,6 +26,8 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "react/function-component-definition": [0],
+  },
   ignorePatterns: [".eslintrc.js"],
 };
