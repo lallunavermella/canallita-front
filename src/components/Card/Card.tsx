@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CardProp } from "../../types/CardProp";
 
 const CardContainer = styled.section`
   border: 1px solid black;
@@ -35,21 +36,15 @@ const AlternativeText = styled.p`
   padding-right: 10px;
 `;
 
-interface Data {
-  title: string;
-  description: string;
-  activities: number;
-}
-
-const Card = ({ title, description, activities }: Data) => (
+const Card = ({ category }: CardProp) => (
   <CardContainer>
     <Picture />
     <CardText>
       <Heading>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2>{category.title}</h2>
+        <p>{category.description}</p>
       </Heading>
-      <AlternativeText>{activities}</AlternativeText>
+      <AlternativeText>{category.activities}</AlternativeText>
     </CardText>
   </CardContainer>
 );

@@ -12,11 +12,13 @@ const DisplayCategories = styled.div`
 const App = (): JSX.Element => {
   const categories = [
     {
+      id: 1,
       title: "museus",
       description: "museus, activitats i mes",
       activities: 12,
     },
     {
+      id: 2,
       title: "parcs",
       description:
         "parcs urbans molt xulos, activitats especifiques en parcs urbans",
@@ -26,12 +28,7 @@ const App = (): JSX.Element => {
   return (
     <DisplayCategories>
       {categories.map((category) => (
-        <Card
-          key={category.title}
-          title={category.title}
-          description={category.description}
-          activities={category.activities}
-        />
+        <Card key={category.id} category={category} />
       ))}
     </DisplayCategories>
   );

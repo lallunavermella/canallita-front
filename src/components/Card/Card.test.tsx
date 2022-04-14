@@ -5,18 +5,13 @@ describe("Given a Card component", () => {
   describe("When it is invoked", () => {
     test("Then it should be render", () => {
       const testData = {
+        id: 1,
         title: "categoria 1",
         description: "description1",
         activities: 3,
       };
 
-      render(
-        <Card
-          title={testData.title}
-          description={testData.description}
-          activities={testData.activities}
-        />
-      );
+      render(<Card category={testData} />);
 
       const heading = screen.getByRole("heading", { name: "categoria 1" });
 
