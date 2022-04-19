@@ -1,37 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
-import Card from "./components/Card/Card";
+import Category from "./pages/Category/Category";
+import Main from "./pages/Main/Main";
 
-const DisplayCategories = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-`;
-
-const App = (): JSX.Element => {
-  const categories = [
-    {
-      id: 1,
-      title: "museus",
-      description: "museus, activitats i mes",
-      activities: 12,
-    },
-    {
-      id: 2,
-      title: "parcs",
-      description:
-        "parcs urbans molt xulos, activitats especifiques en parcs urbans",
-      activities: 5,
-    },
-  ];
-  return (
-    <DisplayCategories>
-      {categories.map((category) => (
-        <Card key={category.id} category={category} />
-      ))}
-    </DisplayCategories>
-  );
-};
+const App = (): JSX.Element => (
+  <Routes>
+    <Route path="/" element={<Main />} />
+    <Route path="/category" element={<Category />} />
+  </Routes>
+);
 
 export default App;

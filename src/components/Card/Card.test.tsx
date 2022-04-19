@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import Card from "./Card";
 
 describe("Given a Card component", () => {
@@ -11,7 +12,11 @@ describe("Given a Card component", () => {
         activities: 3,
       };
 
-      render(<Card category={testData} />);
+      render(
+        <BrowserRouter>
+          <Card category={testData} />
+        </BrowserRouter>
+      );
 
       const heading = screen.getByRole("heading", { name: "categoria 1" });
 

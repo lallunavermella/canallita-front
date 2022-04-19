@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { CardProp } from "../../types/CardProp";
 
@@ -36,17 +37,23 @@ const AlternativeText = styled.p`
   padding-right: 10px;
 `;
 
-const Card = ({ category }: CardProp) => (
-  <CardContainer>
-    <Picture />
-    <CardText>
-      <Heading>
-        <h2>{category.title}</h2>
-        <p>{category.description}</p>
-      </Heading>
-      <AlternativeText>{category.activities}</AlternativeText>
-    </CardText>
-  </CardContainer>
-);
+const Card = ({ category }: CardProp) => {
+  const navigate = useNavigate();
+  const goCategory = () => {
+    navigate(`/category`);
+  };
+  return (
+    <CardContainer onClick={goCategory}>
+      <Picture />
+      <CardText>
+        <Heading>
+          <h2>{category.title}</h2>
+          <p>{category.description}</p>
+        </Heading>
+        <AlternativeText>{category.activities}</AlternativeText>
+      </CardText>
+    </CardContainer>
+  );
+};
 
 export default Card;
