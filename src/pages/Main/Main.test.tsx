@@ -5,7 +5,7 @@ import Main from "./Main";
 describe("Given a Main page", () => {
   describe("When it is invoked", () => {
     test("Then it should be rendered a heading 'Canallita'", () => {
-      const title = "`Canallita `";
+      const title = "`Canallita`";
       render(
         <BrowserRouter>
           <Main />

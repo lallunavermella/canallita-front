@@ -39,11 +39,11 @@ const AlternativeText = styled.p`
 
 const Card = ({ category }: CardProp) => {
   const navigate = useNavigate();
-  const goCategory = () => {
-    navigate(`/category`);
+  const navigateToCategoryPage = () => {
+    navigate(`/${category.title}`);
   };
   return (
-    <CardContainer onClick={goCategory}>
+    <CardContainer onClick={navigateToCategoryPage}>
       <Picture />
       <CardText>
         <Heading>
