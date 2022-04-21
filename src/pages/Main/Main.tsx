@@ -6,7 +6,10 @@ const DisplayCategories = styled.div`
   flex-direction: column;
   gap: 10px;
 `;
-
+const DisplayPage = styled.div`
+  position: absolute;
+  top: 50px;
+`;
 const Main = () => {
   const categories = [
     {
@@ -24,14 +27,14 @@ const Main = () => {
     },
   ];
   return (
-    <>
-      <h1>`Canallita `</h1>
+    <DisplayPage>
+      <h1>`Canallita`</h1>
       <DisplayCategories>
         {categories.map((category) => (
           <Card key={category.id} category={category} />
         ))}
       </DisplayCategories>
-    </>
+    </DisplayPage>
   );
 };
 

@@ -16,6 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "test/**/*.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "test/**/*.ts",
+    "src/components/Button/Button.tsx",
+    "src/components/Button/Button.test.tsx"
+  ],
   "exclude": [".eslintrc.js", "reportWebVitals.ts"]
 }
